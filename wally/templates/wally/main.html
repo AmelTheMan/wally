@@ -278,6 +278,105 @@ video::-webkit-media-controls-current-time-display {
       
 
     <!-- Podnaslov -->
+    <h2 class="h1align"><span class="color">Free</span> wallpapers!!</h2>
     
+    <div class="nemrdaj">
+      <div class="card-group">
+
+      {% for post in posts %}
+       
+      <div class="videomar">
+        <video class="grow"controls="hidden" width="600" height="500">
+            <source src="{{post.video.url}}" >
+        </video> <br>  
+        <!-- button --> 
+        <a href="{% url "post-detail-page" post.slug %}">
+        <button type="button" class="btn btn-outline-light" >Download</button></a>
+    </div>
+      {% endfor %}
+    
+</div>
+</div>
+
+
+
+  <!-- Sakriveni video red -->
+  <div id="animiranidiv">
+    <div class="pokazi" style="display:none">
+        <div class="card-group">
+          {% for post in posts %}
+          <div class="videomar">
+            <video class="grow"controls="hidden" width="600" height="500">
+                <source src="{{post.video.url}}" >
+            </video> <br>  
+            <!-- button --> 
+            <a href="{% url "post-detail-page" post.slug %}">
+            <button type="button" class="btn btn-outline-light" >Download</button></a>
+        </div>
+          {% endfor %}
+</div>
+</div>
+</div>
+
+
+    
+    <!-- button za vise -->
+        <div id="wrapper"> 
+            <button class="neons neons1 SeeMore2"  onclick="myFunction()">See More</button>
+       
+        </div>
+      
+
+
+
+
+
+    <!-- Footer -->
+    <div class="nemrdaj " id="footer">
+    <div class="footermargin">
+    <div class="footerborder1 neons1 ">
+     <footer class="bg-black text-center text-white">
+        <div class="container p-4 pb-0">
+          <!--Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/wallppr.e/" role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/e_pixar" role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://books.google.ba/books/about/Wall_E.html?id=ExxcKwAACAAJ&redir_esc=y" role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/walle.off/?hl=hr" role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </section>
+        </div>
+
+
+        <div class="footerborder">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2021 Copyright:
+          <a class="text-white" href="https://www.instagram.com/amel_hadzicc/?hl=hr">Amel</a>
+        </div>
+      </footer>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+
+
+
+
 </body>
 </html>
