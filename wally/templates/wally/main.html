@@ -1,0 +1,283 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e3b3e6d1d7.js" crossorigin="anonymous"></script>
+    <title>Wally4K</title>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+</head>
+<style>
+
+/* body style */
+
+
+body{
+    background-color: black;
+    color: white;
+}
+
+
+
+ /* boja navbara */
+.navbar-custom {
+    background-color: rgb(0, 0, 0);
+}
+
+
+/* video style */
+video::-webkit-media-controls-volume-slider {
+    display: none;
+}
+
+video::-webkit-media-controls-mute-button {
+    display: none;
+}
+
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+
+video::-webkit-media-controls-current-time-display {
+    display: none;
+}
+.videomar{
+    margin-left: 55px;
+}
+/* ostala poboljsanja */
+.margina{
+    margin-top: 70px;
+}
+.footerborder{
+    border-top:1px solid rgb(255, 255, 255);
+}
+.footerborder1{
+    border-top:1px solid rgb(240, 40, 157);
+    
+}
+.navalign{
+    margin-left: 20px;
+}
+.naziv{
+    font-size: 70px;
+}
+.podnaslov{
+    font-size: 28px;
+  
+}
+.h1align{
+    text-align: center;
+    margin-top: 50px;
+}
+.footermargin{
+    margin-top: 70px;
+}
+.nemrdaj{
+    position: static;
+}
+
+.color{
+    
+     color: rgb(240, 40, 157);
+     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+
+}
+/* video animaion */
+.grow:hover
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
+        animation-delay:100ms;
+}
+
+
+
+/* button */
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    margin-top: 70px;
+   
+    
+}
+
+:root {
+    --clr-neon: rgb(240, 40, 157);
+    --clr-bg: hsl(323 21% 16%)
+    
+}
+
+.neons {
+    font-size: 25px;
+    height: 60px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Balsamiq Sans", cursive;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 3px solid;
+    background-color: transparent;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    transition: all 0.5s
+}
+
+
+.neons1:hover{
+    background-color: var(--clr-neon);
+    color: rgb(255, 255, 255);
+    border-top:1px solid rgb(240, 40, 157);   
+}
+
+
+
+/* bgvideo */
+.video-background-holder {
+  position: relative;
+  background-color: black;
+  height: calc(100vh - 72px);
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-background-holder video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-background-content {
+  position: relative;
+  z-index: 2;
+}
+
+.video-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+.traka{
+       position: fixed;
+       top: 0;
+       z-index: 1030; 
+       width: 100%;
+    }
+.leti{
+  margin-left:470px;
+}
+</style>
+
+
+
+
+
+
+
+
+
+<body>
+    <!-- Navbar -->
+    <nav class=" traka navbar navbar-expand-lg navbar-dark navbar-custom ">
+        <div class="container-fluid ">   
+                <a class="navbar-brand" href="#">
+                  <img src="{% static 'img/logo.png' %}" alt="" width="40" height="40">
+                </a>
+          <a class="navbar-brand mb-0 h1 " href="#"><span class="color">Wally</span>4K</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item navalign">
+                    <a class="nav-link" href="#">MobileWP</a>
+              </li>
+              <li class="nav-item navalign">
+                <a class="nav-link" href="#">DownloadApp</a>
+              </li>
+              <li class="nav-item navalign">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item navalign ">
+                <a class="nav-link" href="#footer">Contact</a>
+              </li>
+              <li class="nav-item navalign leti">
+              <span class="nav-link">Hello {{request.user}}</span> 
+              </li>
+              <li class="nav-item navalign ">
+                <a class="nav-link" href="{% url "logout" %}"> Login/out</a> 
+                
+                </li>
+              
+            
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <!-- BG video -->
+    <div class="video-background-holder">
+        <div class="video-background-overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+              <source src="{% static 'img/VideoBG.mp4' %}" type="video/mp4">
+          </video>
+        <div class="video-background-content container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+                <h1 class="naziv"><span class="color">Wally</span>4K</h1>
+                   
+                <p class="podnaslov">Best moving wallpapers</p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        
+      
+
+    <!-- Podnaslov -->
+    
+</body>
+</html>
